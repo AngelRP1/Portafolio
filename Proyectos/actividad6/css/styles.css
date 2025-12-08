@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    color: white;
+
+}
+
+body.fondo-juego-activo {
+    background-repeat: repeat;
+    background-color: #228B22;
+    overflow: hidden;
+}
+
+#playerSelect {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.controls button {
+    margin-bottom: 10px;
+}
+
+#splashScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 100;
+    animation: splashSequence 3.5s ease-in-out forwards;
+}
+
+@keyframes splashSequence {
+    0% {
+        background-color: #000; 
+        opacity: 0;
+        visibility: visible;
+    }
+    20% {
+        background-color: #000;
+        opacity: 0;
+    }
+    50% {
+        background-color: #000;
+        opacity: 1;
+        visibility: visible;
+    }
+    90% {
+        background-color: #000;
+        opacity: 0;
+    }
+    100% { 
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+#splashScreen h2{
+    font-size: 50pt;
+}
+
+.oculto {
+    display: none !important;
+}
+
+#p1Button, #p2Button, #startButton, #resetButton {
+    margin-top: 10px;
+    margin-bottom: 1px;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14pt;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #495057;
+    background: #495057;
+}
+
+h2{
+    font-size: 20pt;
+}
+
+#p1Button:hover, #p2Button:hover, #startButton:hover, #resetButton:hover {
+    background: #fff;
+    color: #495057
+}

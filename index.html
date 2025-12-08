@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Angel Rivera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy <span class="highlight">Angel Rivera</span></h1>
+            <h2>Desarrollador Web & Software</h2>
+            <p>
+                Estudiante de Ingeniería apasionado por el desarrollo web y la creación de experiencias interactivas. 
+                Me especializo en resolver problemas complejos mediante algoritmos eficientes y diseño intuitivo.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/AngelRP1"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/angel-rivera-026189297/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="img/perfil.png" alt="Foto de Perfil">
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Tecnologías</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-card"><i class="fab fa-php"></i> PHP</div>
+            <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
+            <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Proyectos Académicos</h2>
+        <p class="section-subtitle">Selecciona el botón izquierdo de cada tarjeta para interactuar aquí mismo.</p>
+
+        <div class="projects-container">
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Unidad 1</span>
+                    <h3>Sistema de Ventas</h3>
+                </div>
+                <div class="card-body">
+                    <p>Formulario dinámico para generar órdenes de venta. Calcula IVA y totales en tiempo real manipulando tablas.</p>
+                    <div class="tech-stack">
+                        <span>DOM</span><span>Forms</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('proyectos/practica_ventas/index.html')">
+                        Vista Previa
+                    </button>
+                    <a href="proyectos/practica_ventas/index.html" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Unidad 1</span>
+                    <h3>Juego tipo Traffic Racer</h3>
+                </div>
+                <div class="card-body">
+                    <p>Juego de conducción arcade donde debes esquivar el tráfico en sentido contrario. Desarrollado con Canvas API, incluye modos para 1 y 2 jugadores en local.</p>
+                    <div class="tech-stack">
+                        <span>HTML5 Canvas</span><span>JavaScript</span><span>Game Logic</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('proyectos/Actividad6/index.html')">
+                        Jugar Ahora
+                    </button>
+                    <a href="proyectos/actividad6/index.html" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Proyecto U1</span>
+                    <h3>Pac-Man</h3>
+                </div>
+                <div class="card-body">
+                    <p>Recreación del clásico juego usando Canvas API. Incluye lógica de fantasmas, colisiones y sonidos.</p>
+                    <div class="tech-stack">
+                        <span>Canvas</span><span>POO</span><span>Audio</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('proyectos/Pac-Man/pacman.html')">
+                        Jugar Ahora
+                    </button>
+                    <a href="proyectos/pac-man/pacman.html" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Proyecto Extra U1</span>
+                    <h3>Tametsi Hex</h3>
+                </div>
+                <div class="card-body">
+                    <p>Juego de lógica tipo Buscaminas hexagonal. Algoritmos de generación procedimental y recursividad.</p>
+                    <div class="tech-stack">
+                        <span>Algoritmos</span><span>SVG</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('proyectos/tametsi/html/index.html')">
+                        Jugar Ahora
+                    </button>
+                    <a href="proyectos/tametsi/html/index.html" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Unidad 2</span>
+                    <h3>La Crónica del Juego</h3>
+                </div>
+                <div class="card-body">
+                    <p>Maquetación avanzada CSS simulando un periódico antiguo. Uso de Grid, Flexbox y fuentes personalizadas.</p>
+                    <div class="tech-stack">
+                        <span>CSS Grid</span><span>Design</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('proyectos/Periodico/index.html')">
+                        Leer
+                    </button>
+                    <a href="proyectos/periodico/index.html" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="card-header">
+                    <span class="unit-badge">Proyecto U2</span>
+                    <h3>Editor Colaborativo P2P</h3>
+                </div>
+                <div class="card-body">
+                    <p>Editor de código en línea que permite escribir y compartir programas en C, DOG y Chicken de forma colaborativa. Utiliza conexiones P2P para sincronizar el texto en tiempo real.</p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span><span>P2P</span><span>WebRTC</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-preview" onclick="openModal('https://compilac.netlify.app/hola')">
+                        Probar Editor
+                    </button>
+                    <a href="https://compilac.netlify.app/hola" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Pestaña Completa
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Angel Rivera. Desarrollado para la materia de Programación Web.</p>
+    </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="iframe-container">
+                <iframe id="projectFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

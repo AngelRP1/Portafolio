@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.2/math.min.js"></script>
+    </head>
+<body>
+    <h1>Calculadora sencillita</h1>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="4"><input type="text" readonly id="entrada"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button class="borrar" onclick="limpiar()">AC</button></td>
+                <td><button class="eliminar" onclick="eliminarUltimo()"><-</button></td>
+                <td><button onclick="agregar('(')">(</button></td>
+                <td><button onclick="agregar(')')">)</button></td>
+            </tr>
+            <tr>
+                <td class="numero"><button onclick="agregar('7')">7</button></td>
+                <td class="numero"><button onclick="agregar('8')">8</button></td>
+                <td class="numero"><button onclick="agregar('9')">9</button></td>
+                <td class="operacion"><button onclick="agregar('/')">/</button></td>
+            </tr>
+            <tr>
+                <td class="numero"><button onclick="agregar('4')">4</button></td>
+                <td class="numero"><button onclick="agregar('5')">5</button></td>
+                <td class="numero"><button onclick="agregar('6')">6</button></td>
+                <td class="operacion"><button onclick="agregar('*')">*</button></td>
+            </tr>
+            <tr>
+                <td class="numero"><button onclick="agregar('1')">1</button></td>
+                <td class="numero"><button onclick="agregar('2')">2</button></td>
+                <td class="numero"><button onclick="agregar('3')">3</button></td>
+                <td class="operacion"><button onclick="agregar('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calcular()">=</button></td>
+                <td class="numero"><button onclick="agregar('0')">0</button></td>
+                <td><button onclick="agregar('.')">.</button></td>
+                <td class="operacion"><button onclick="agregar('+')">+</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

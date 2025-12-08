@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ventas</title>
+</head>
+<body>
+    <h1>Orden de venta</h1>
+    <h3>Producto</h3>
+    
+    <select name="producto" id="productoSelect">
+        <option value="" data-precio="">Seleccione una opcion</option>
+        <option value="lapiz" data-precio="5">Lapiz</option>
+        <option value="pluma" data-precio="8">Pluma</option>
+        <option value="borrador" data-precio="3">Borrador</option>
+        <option value="sacapuntas" data-precio="4">Sacapuntas</option>
+        <option value="cuaderno" data-precio="25">Cuaderno</option>
+        <option value="carpeta" data-precio="15">Carpeta</option>
+        <option value="hoja" data-precio="1">Hoja de maquina</option>
+    </select>
+
+    <h3>Precio</h3>
+    <span id="precioSeleccionado">$0.00</span>
+
+    <h3>Unidades</h3>
+    <input type="number" placeholder="Ingrese la cantidad" id="unidadesInput">
+    
+    <button class="agregar" id="btnAgregar">Agregar</button>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Numero</td>
+                <td>Producto</td>
+                <td>Precio Unitario</td>
+                <td>Unidades</td>
+                <td>Monto</td>
+                <td>Acciones</td> 
+            </tr>
+        </thead>
+
+        <tbody id="tablaCuerpo">
+            
+            <tr id="filaSubtotal">
+                <td colspan="5">Subtotal</td>
+                <td id="celdaSubtotal">$0.00</td>
+            </tr>
+            <tr>
+                <td colspan="5">Iva (16%)</td>
+                <td id="celdaIva">$0.00</td>
+            </tr>
+            <tr>
+                <td colspan="5">Total</td>
+                <td id="celdaTotal">$0.00</td>
+            </tr>
+            
+        </tbody> 
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

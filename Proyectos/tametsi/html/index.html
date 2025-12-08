@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tametsi — Hex Mines</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section id="menu" class="screen">
+    <div class="menu-card">
+      <h1 class="title-pixel">TAMETSI</h1>
+
+      <div class="menu-buttons">
+        <button class="menu-btn" data-map="0">ANILLO TRICOLOR</button>
+        <button class="menu-btn" data-map="1">PICA ROMBOS</button>
+        <button class="menu-btn" data-map="2">HEX CORE</button>
+        <button class="menu-btn" data-map="3">FLECHAS</button>
+        <button class="menu-btn" data-map="4">ISLA</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="game" class="screen hidden">
+    <header class="top-bar">
+      <button id="btnMenu" class="back-btn"> Volver al menú</button>
+      <span id="mapName" class="map-title"></span>
+      <div class="spacer"></div>
+      <button id="btnUndo" class="undo-btn" disabled hidden>Deshacer (Z)</button>
+      <button id="btnRestart" class="restart-btn">Reiniciar (R)</button>
+    </header>
+
+    <div id="legend" class="legend"></div>
+
+    <div class="board-wrap">
+      <svg id="board" class="board" role="img" aria-label="Tablero Tametsi"></svg>
+    </div>
+
+    <footer class="footer">
+      <p>Objetivo: coloca banderas  sobre todas las minas.</p>
+      <p>Atajos: R (reiniciar), clic izq. (revelar), clic der. (bandera), M (menú).</p>
+    </footer>
+
+    <div id="loseOverlay" class="overlay hidden" aria-hidden="true">
+      <div class="modal">
+        <h3 class="modal-title">¡Perdiste!</h3>
+        <p class="modal-sub">¿Qué quieres hacer?</p>
+        <p class="modal-sub" style="font-size: 0.85em; opacity: 0.7; margin-top: -10px;">(Presiona 'Z' para deshacer)</p>
+        <div class="modal-actions">
+          <button id="btnRetry" class="modal-btn primary">Reintentar</button>
+          <button id="btnToMenu" class="modal-btn">Volver al menú</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="winOverlay" class="overlay hidden" aria-hidden="true">
+      <div class="modal win">
+        <h3 class="modal-title win-title">¡Felicidades, ganaste!</h3>
+        <div class="win-stats">
+          <p><span class="label">Tiempo:</span> <span id="winTime">0:00.00</span></p>
+          <p><span class="label">Clics:</span> <span id="winClicks">0</span></p>
+          <p><span class="label">Semilla:</span> <span id="winSeed">-</span></p>
+          <p id="winBadge" class="win-badge">Perfecto</p>
+          <p id="winUndoNote" class="win-note hidden">Usaste Deshacer</p>
+        </div>
+        <div class="modal-actions">
+          <button id="btnWinRetry" class="modal-btn primary">Reintentar</button>
+          <button id="btnWinMenu" class="modal-btn">Volver al menú</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../scripts/script.js" defer></script>
+</body>
+</html>
